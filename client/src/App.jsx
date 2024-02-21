@@ -2,6 +2,9 @@ import { StreamChat } from "stream-chat"
 import { Chat } from "stream-chat-react"
 import { ChannelListContainer, ChannelContainer ,AuthCheck  } from "./components/index"
 import "./App.css"
+import Cookies from "universal-cookie"
+
+const cookies = new Cookies();
 
 function App() {
 
@@ -10,8 +13,10 @@ function App() {
 
 const clients = StreamChat.getInstance(apiKey)
 
-const authToken = false ; 
- if(!authToken) return <AuthCheck/>
+const token = cookies.get("token")
+
+// const authToken = false ; 
+ if(!token) return <AuthCheck/>
 
   return (
     <>

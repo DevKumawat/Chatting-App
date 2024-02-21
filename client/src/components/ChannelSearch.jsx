@@ -23,14 +23,14 @@ function ChannelSearch() {
       }
     return (
         <>
-        <div className="flex items-center border rounded-lg p-1 mt-3 ">
+        <div className="flex items-center border-2 rounded-lg p-1 mt-6 ">
             <div className="w-6 mx-2 border-right-2 border-r-[1px]">
             <p>
             <FaSearch />
             </p>
             </div>
             <div >
-            <input className="bg-gray-800 outline-none border-0 " type="text" placeholder="Search" value={query} onChange={onSearch} />
+            <input className="bg-sky-500 outline-none border-0 placeholder:italic placeholder:text-white" type="text" placeholder="Search or start a new chat" value={query} onChange={onSearch} />
             </div>
         </div>
         </>

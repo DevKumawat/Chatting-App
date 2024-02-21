@@ -35,13 +35,13 @@ const signup = async( req , res)=>{
 const login = async ( req,res)=>{
     try {
 
-        const {userName , password} = req.body;
+        const {userName, password} = req.body;
         const serverClient = connect(api_key,api_secret, api_id)
 
         const client = new StreamChat.getInstance(api_key , api_secret)
 
         const { users } = await client.queryUsers({ name : userName });
-        console.log(users);
+        // console.log(users);
         // console.log("hello");
         
         if(!users.length){
