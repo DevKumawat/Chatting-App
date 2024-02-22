@@ -1,9 +1,12 @@
 
+
 const ChannelContainer = () =>{
     return (
         <>
-        <div>
+        <div className="">
+        
             channel
+            
         </div>
         </>
     )

@@ -3,6 +3,7 @@ import { Chat } from "stream-chat-react"
 import { ChannelListContainer, ChannelContainer ,AuthCheck  } from "./components/index"
 import "./App.css"
 import Cookies from "universal-cookie"
+import Switcher from "./components/Switcher"
 
 const cookies = new Cookies();
 
@@ -24,8 +25,9 @@ const token = cookies.get("token")
         <Chat client={clients}>
           <ChannelListContainer/>
           <ChannelContainer/>
-
+           
         </Chat>
+
       </div>
     </>
   )

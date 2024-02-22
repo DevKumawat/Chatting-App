@@ -32,11 +32,11 @@ const ChannelListContainer = () => {
 
   return (
     <>
-      <div className="h-screen bg-sky-500	 flex">
+      <div className="h-screen bg-sky-500	text-white  flex dark:bg-black dark:text-sky-500">
         <div className="w-20">
           <Sidebar />
         </div>
-        <div className="text-white m-4">
+        <div className=" m-4">
           <CompanyHeader />
           <ChannelSearch/>
           <div className="mt-4">
