@@ -11,6 +11,7 @@ root.classList.add(theme);
 
 // save theme to local storage
 localStorage.setItem('theme', theme);
+
 }, [theme, colorTheme]);
 
 return [colorTheme, setTheme];

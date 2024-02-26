@@ -11,7 +11,7 @@ const api_key =process.env.STREAM_API_KEY;
 const api_secret = process.env.STREAM_API_SECRET;
 const api_id = process.env.STREAM_APP_ID;
 
-console.log(api_id , api_key , api_secret);
+// console.log(api_id , api_key , api_secret);
 
 
 const signup = async( req , res)=>{
@@ -45,7 +45,7 @@ const login = async ( req,res)=>{
         // console.log("hello");
         
         if(!users.length){
-            return res.status(400).json({message:"User not found"})
+            return res.status(400).json({message:"User does not exists"})
         }
         
         const success = await bcrypt.compare(password , users[0].hashedPassword)
@@ -55,11 +55,10 @@ const login = async ( req,res)=>{
         if(success){
             res.status(200).json({token , fullName:users[0].fullName , userName , userId : users[0].id})
         }else{
-            res.status(500).json({message : error})
+            res.status(500).json({message : "invalid credentials"})
         }
 
     } catch (error) {
-      
         res.status(500).json({message : error})
     }
 

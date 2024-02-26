@@ -2,3 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
+.active-indicator {
+    transition: all 0.3s ease-in-out; /* You can adjust the transition duration and timing function */
+  }
+  

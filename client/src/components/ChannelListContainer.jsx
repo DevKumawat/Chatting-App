@@ -1,7 +1,7 @@
 // import { preview } from "vite";
 import { ChannelSearch, Sidebar, TeamChannelList, TeamChannelPreview } from "./"
 import { ChannelList , useChatContext } from "stream-chat-react";
-import { PiNotePencilThin } from "react-icons/pi";
+import { PiNotePencilBold } from "react-icons/pi";
 import { MdOutlineSegment } from "react-icons/md";
 
 
@@ -13,12 +13,12 @@ const ChannelListContainer = () => {
 
         <div>
 
-        <p className="text-xl font-medium	">Chat Application</p>
+        <p className="text-xl font-medium	">Chats</p>
         </div>
 
-        <div className="flex text-2xl gap-8">
+        <div className="flex text-2xl gap-6 text-cyan-600">
           <span>
-          <PiNotePencilThin />
+          <PiNotePencilBold />
           </span>
           <span>
           <MdOutlineSegment />
@@ -32,11 +32,11 @@ const ChannelListContainer = () => {
 
   return (
     <>
-      <div className="h-screen bg-sky-500	text-white  flex dark:bg-black dark:text-sky-500">
+      <div className="h-screen text-black flex ">
         <div className="w-20">
           <Sidebar />
         </div>
-        <div className=" m-4">
+        <div className=" p-5 bg-sky-100 rounded-l-3xl relative right-3 dark:bg-black dark:border dark:text-white dark:border-cyan-600">
           <CompanyHeader />
           <ChannelSearch/>
           <div className="mt-4">
